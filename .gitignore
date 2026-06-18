@@ -1,0 +1,19 @@
+# Python bytecode cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Model weights and saved data (regenerable by running train.py)
+outputs/*.pt
+outputs/*.npz
+
+# Jupyter / IDE / OS clutter
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store

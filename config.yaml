@@ -1,0 +1,20 @@
+# Hyperparameters and data settings for the heat-diffusion surrogate.
+# Keeping these here (not in the code) makes experiments reproducible and
+# changeable without editing source.
+
+seed: 0              # global RNG seed (NumPy + PyTorch)
+
+# data
+n_samples: 3000      # number of (parameter -> field) pairs to simulate
+n_points: 64         # spatial grid points = output vector length
+t_final: 2.0         # time at which the diffused field is recorded
+frac_train: 0.7
+frac_val: 0.15       # test fraction is the remainder (0.15)
+
+# model
+hidden: [128, 128]   # hidden layer sizes of the MLP (2 hidden layers each with size 128)
+
+# training
+lr: 0.001            # Adam optimiser learning rate
+batch_size: 64.      # How many samples in a batch before the weights are adjusted by training
+epochs: 300.         # How many rounds of training n_samples samples until the performance no longer increase meaningfully (be careful with overfitting)

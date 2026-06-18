@@ -1,0 +1,5 @@
+rmse=5.311768e-03
+mean_rel_err_pct=0.525
+t_solver_ms=1.3752
+t_surrogate_ms=0.0167
+speedup=82.3
