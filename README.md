@@ -19,7 +19,7 @@ sharp, narrow profiles are harder than broad ones (0.62% against 0.43%). This is
 expected behaviour of a data driven surrogate, accurate in the dense interior and
 weaker at the sparse edges of the parameter space.
 
-## Why
+## Motivation
 
 Fitting physical models to data often means running a numerical solver many times,
 which is frequently the dominant cost. In my previous research on a cosmic ray transport
@@ -33,12 +33,12 @@ structure while staying cheap to solve and easy to interpret.
 
 The simulator solves the 1D heat equation
 
-$$\frac{\partial u}{\partial t} = D\,\frac{\partial^2 u}{\partial x^2}$$
+$$\frac{\partial u}{\partial t} = D \ \frac{\partial^2 u}{\partial x^2}$$
 
 with an implicit, stiff stable integrator so the training labels are reliable. 
 The surrogate, a small multilayer perceptron, learns the operator
 
-$$(D,\ A,\ c,\ w) \longmapsto u(x,\ t{=}T).$$
+$$(D,\ A,\ \mu,\ \sigma) \longmapsto u(x,\ t=T).$$
 
 Inputs and outputs are standardised using training set statistics only, to avoid
 leaking held out data into training. Settings are in `config.yaml` and the pipeline

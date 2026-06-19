@@ -13,7 +13,7 @@ Produces metrics that investigates the three aspects:
     2. Qualitative check: do predicted profiles actually track the true
         diffused fields? (overlaid plots of test set samples)
     3. Speed: how much faster is one network forward pass than one PDE
-        solve? This is the entire point of a surrogate, so it is the headline result.
+        solve? (headline result)
 """
 
 import time

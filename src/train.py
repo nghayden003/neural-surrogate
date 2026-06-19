@@ -133,9 +133,9 @@ def main():
 
     # Plot the loss curve for inspection of whether hyperparameter finetuning is needed
     plt.figure(figsize=(6, 4))
-    plt.semilogy(train_curve, label="train")
-    plt.semilogy(val_curve, label="validation")
-    plt.xlabel("epoch")
+    plt.semilogy(train_curve, label="Training")
+    plt.semilogy(val_curve, label="Validation")
+    plt.xlabel("Epoch")
     plt.ylabel("MSE loss (normalised units)")
     plt.title("Training and validation loss")
     plt.legend()
